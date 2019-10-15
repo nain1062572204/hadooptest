@@ -4,7 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 @Slf4j
 public class HDFSUtils {
@@ -20,7 +22,7 @@ public class HDFSUtils {
      */
     static {
         configuration = new Configuration();
-        configuration.set("fs.defaultFS", "hdfs://129.204.187.115:9000");
+        configuration.set("fs.defaultFS", "hdfs://txrose:9000");
         configuration.set("dfs.support.append", "true");
         configuration.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
         configuration.set("dfs.client.use.datanode.hostname", "true");

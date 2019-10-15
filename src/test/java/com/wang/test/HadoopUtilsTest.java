@@ -29,7 +29,7 @@ public class HadoopUtilsTest {
 
     @Test
     public void readFile() {
-        log.info(HDFSUtils.readFile("/output/part-r-00000"));
+        log.info(HDFSUtils.readFile("/test/test.txt"));
     }
 
     @Test
