@@ -14,7 +14,7 @@ public class HadoopUtilsTest {
 
     @Test
     public void testUpload() {
-        HDFSUtils.upload("/home/rose/soft/test.txt", "/input");
+        HDFSUtils.upload("/home/rose/soft/test.txt", "/test");
     }
 
     @Test
@@ -29,7 +29,7 @@ public class HadoopUtilsTest {
 
     @Test
     public void readFile() {
-        log.info(HDFSUtils.readFile("/output/part-r-00000"));
+        log.info(HDFSUtils.readFile("/test/test.txt"));
     }
 
     @Test
@@ -39,6 +39,6 @@ public class HadoopUtilsTest {
 
     @Test
     public void createFile() {
-        HDFSUtils.createFile("/input/test.txt", "这是追加的内容");
+        HDFSUtils.createFile("/test/test.txt", "这是追加的内容");
     }
 }
